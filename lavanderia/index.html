@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavandería Crespo</title>
+
+<style>
+.factura-info{
+background:white;
+max-width:500px;
+margin:auto;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.factura-info ul{
+text-align:left;
+margin:15px 0;
+}
+
+.boton-factura{
+display:inline-block;
+margin-top:15px;
+background:#25D366;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#eef5ff;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#0d6efd,#4da3ff);
+color:white;
+padding:60px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+}
+
+/* NAV */
+
+nav{
+background:#81b1f7;
+padding:12px;
+text-align:center;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* SECCIONES */
+
+.section{
+padding:60px 10%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+color:#0d6efd;
+font-size:32px;
+}
+
+/* SERVICIOS */
+
+.servicios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.servicio{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.servicio:hover{
+transform:translateY(-5px);
+}
+
+/* SUCURSALES */
+
+.sucursales{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.03);
+}
+
+.foto{
+height:200px;
+background:#cfe3ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+color:#555;
+}
+
+.info{
+padding:20px;
+}
+
+.info h3{
+color:#0d6efd;
+margin-bottom:10px;
+}
+
+/* ATENCION CLIENTES */
+
+.reglas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.regla{
+background:white;
+padding:25px;
+border-left:5px solid #0d6efd;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* FORMA DE PAGO */
+
+.pago{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+max-width:600px;
+margin:auto;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+background:#0d6efd;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Lavandería Crespo</h1>
+<p>Servicio de lavado y planchado</p>
+</header>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#sucursales">Sucursales</a>
+<a href="#clientes">Atención a clientes</a>
+<a href="#pago">Pagos</a>
+</nav>
+
+
+<section class="section" id="servicios">
+
+<h2>Nuestros Servicios</h2>
+
+<div class="servicios">
+
+<div class="servicio">
+<h3>Lavado de ropa</h3>
+<p>Lavado profesional de prendas.</p>
+</div>
+
+<div class="servicio">
+<h3>Edredones y cobijas </h3>
+<p>Lavado especial para prendas grandes.</p>
+</div>
+
+<div class="servicio">
+<h3>Vestidos y trajes</h3>
+<p>Cuidado especial para ropa de fiesta.</p>
+</div>
+
+<div class="servicio">
+<h3>Secado</h3>
+<p>Servicio rápido y eficiente.</p>
+</div>
+
+<div class="servicio">
+<h3>Planchado</h3>
+<p>Servicio rapido y uniforme.</p>
+</div>
+
+<div class="servicio">
+<h3>Lavado de calzado</h3>
+<p>Lavado de zapatos ,tennis y todo tipo de calzado.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="sucursales">
+
+<h2>Nuestras Sucursales</h2>
+
+<div class="sucursales">
+
+<div class="card">
+<img src="imagenes/sucursal1.jpg" style="width:100%; height:200px; object-fit:cover;">
+
+<div class="info">
+<h3>Sucursal Manuel Sabino Crespo</h3>
+
+<b>Lunes a Sábado</b><br>
+8:00 am – 7:30 pm<br><br>
+
+<b>Domingo</b><br>
+9:00 am – 3:00 pm<br><br>
+
+<b>Ubicacion</b><br>
+Ejutla de Crespo, Calle Manuel Sabino Crespo #
+
+</div>
+</div>
+
+
+<div class="card">
+<img src="imagenes/sucursal2.jpg" style="width:100%; height:200px; object-fit:cover;">
+
+<div class="info">
+<h3>Sucursal Porfio Diaz</h3>
+
+<b>Lunes a Sábado</b><br>
+8:00 am – 7:00 pm<br><br>
+
+<b>Domingo</b><br>
+9:00 am – 3:00 pm<br><br>
+
+<b>Ubicacion</b><br>
+Ejutla de Crespo, Calle Porfio Diaz #
+
+</div>
+</div>
+
+
+<div class="card">
+<img src="imagenes/sucursal3.jpg" style="width:100%; height:200px; object-fit:cover;">
+
+<div class="info">
+<h3>Sucursal Hidalgo</h3>
+
+<b>Lunes a Sábado</b><br>
+8:00 am – 7:30 pm<br><br>
+
+<b>Domingo</b><br>
+9:00 am – 3:00 pm<br><br>
+
+<b>Ubicacion</b><br>
+Ejutla de Crespo, Calle Hidalgo #
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="clientes">
+
+<h2>Atención a Clientes</h2>
+
+<div class="reglas">
+
+<div class="regla">
+<b>Teléfono obligatorio</b><br>
+Es obligatorio dejar un número de teléfono al dejar su ropa.
+</div>
+
+<div class="regla">
+<b>Recibo</b><br>
+Es obligatorio presentar su recibo para recoger su ropa.
+</div>
+
+<div class="regla">
+<b>Tiempo de recogida</b><br>
+Tiene 15 días para recoger su ropa, después no nos hacemos responsables.
+</div>
+
+<div class="regla">
+<b>Prendas que despintan</b><br>
+Si alguna prenda despinta debe colocarse en una bolsa aparte y avisar al personal.
+</div>
+
+<div class="regla">
+<b>Prendas especiales</b><br>
+Cobijas, edredones, cobertores, sleeping, colchonetas, almohadas, cojines, peluches, chamarras y vestidos se cobran por pieza.
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="pago">
+
+<h2>Forma de Pago</h2>
+
+<div class="pago">
+
+<p><b>TRANFERENCIA BANCARIA</b></p>
+
+<br>
+
+Titular:<br>
+<b>Osvaldo Jesús Valencia Ortiz</b>
+
+<br><br>
+
+Banco:<br>
+<b>Scotiabank</b>
+
+<br><br>
+
+Cuenta:<br>
+<b>5579209153361149</b>
+
+<br><br>
+
+También aceptamos pago en efectivo en sucursal.
+
+</div>
+
+</section>
+<section class="section" id="facturacion">
+
+<h2>Facturación</h2>
+
+<div class="factura-info">
+
+<p>Si requiere factura, envíe los siguientes datos por WhatsApp:</p>
+
+<ul>
+<li>Nombre o Razón Social</li>
+<li>RFC</li>
+<li>Correo electrónico</li>
+<li>Uso de CFDI</li>
+<li>Foto o número de su recibo</li>
+</ul>
+
+<p>
+Envíe la información al siguiente número:
+<br>
+<b>951 123 5706</b>
+</p>
+
+<a href="https://wa.me/529511235706" target="_blank" class="boton-factura">
+Enviar datos por WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Teléfono de servicio: 951 123 5706</p>
+<p>© 2026 Lavandería Crespo</p>
+
+</footer>
+
+
+<a class="whatsapp" href="https://wa.me/529511235706" target="_blank">
+WhatsApp
+</a>
+
+</body>
+</html>
